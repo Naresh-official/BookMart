@@ -1,18 +1,8 @@
-Here is your **final README.md in proper Markdown format**, customized for:
-
-✅ **React + Tailwind CSS frontend**
-✅ **Node.js + Express backend**
-✅ **MongoDB database**
-
-You can **copy–paste directly** into your GitHub repo.
-
 ---
-
 # 📚 Online Book Store — Full-Stack MERN Project
 
 A complete **Online Book Store** project built using the **MERN stack** (MongoDB, Express, React, Node.js) for a college assignment.
 Users can browse books, add them to cart, place orders, and admins can manage books and orders.
-
 ---
 
 ## 🚀 Features
@@ -87,13 +77,6 @@ Admin features include:
 
 ---
 
-## ⭐ Optional Advanced Features
-
--   Wishlist
--   Reviews & Ratings
-
----
-
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -114,14 +97,5 @@ Admin features include:
 ### Database
 
 -   **MongoDB + Mongoose**
-
----
-
-## 🎯 Highlights
-
--   Clean MERN architecture
--   Fully responsive tailwind UI
--   All major e-commerce features implemented
--   Great for college submissions and portfolio use
 
 ---
