@@ -5,10 +5,24 @@ import { ApiResponse } from "../utils/apiResponse.js";
 import asyncHandler from "../utils/asyncHandler.js";
 
 const createOrder = asyncHandler(async (req, res) => {
-	const { items, shippingAddress } = req.body;
+	const { items, shippingAddress, phoneNumber } = req.body;
 
 	if (!items || items.length === 0) {
 		throw new ApiError(400, "No items in order");
+	}
+
+	if (!phoneNumber) {
+		throw new ApiError(400, "Phone number is required");
+	}
+
+	if (
+		!shippingAddress ||
+		!shippingAddress.address ||
+		!shippingAddress.city ||
+		!shippingAddress.postalCode ||
+		!shippingAddress.country
+	) {
+		throw new ApiError(400, "Complete shipping address is required");
 	}
 
 	let totalAmount = 0;
@@ -43,6 +57,7 @@ const createOrder = asyncHandler(async (req, res) => {
 		user: req.user._id,
 		items: orderItems,
 		totalAmount,
+		phoneNumber,
 		shippingAddress,
 	});
 
